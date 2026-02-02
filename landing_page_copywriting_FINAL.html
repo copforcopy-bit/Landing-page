@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriting - Transformă Cuvintele în Vânzări</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            animation: slideInDown 0.7s ease-out;
+            background: linear-gradient(135deg, #00B050 0%, #00A040 50%, #00B050 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* PROCESS SECTION */
+        .process {
+            padding: 80px 20px;
+            background: #0f0f0f;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            font-weight: 700;
+            
+            transition: all 0.3s ease;
+        }
+
+        .section-title:hover {
+            
+            transform: scale(1.02);
+        }
+
+        .process-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00B050 0%, #00A040 50%, #00B050 100%);
+            color: #0f0f0f;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), inset -2px -2px 5px rgba(0,0,0,0.2), 0 8px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .step-number:hover {
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.8), 0 0 80px rgba(255, 165, 0, 0.6), inset -2px -2px 5px rgba(0,0,0,0.2), 0 12px 30px rgba(0,0,0,0.5);
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .process-step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover h3 {
+            
+        }
+
+        .process-step p {
+            color: #A0A0A0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* SERVICII SECTION */
+        .services {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #D4AF37;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover h3 {
+            
+            color: #00A040;
+        }
+
+        .service-card p {
+            color: #A0A0A0;
+            font-size: 0.95rem;
+        }
+
+        /* PREVIEW SECTION */
+        .preview {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        }
+
+        .preview-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .preview-card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .preview-card:hover {
+            transform: scale(1.05);
+        }
+
+        .preview-image {
+            width: 100%;
+            height: 250px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .preview-content {
+            padding: 30px;
+        }
+
+        .preview-content h4 {
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            
+            transition: all 0.3s ease;
+        }
+
+        .preview-card:hover h4 {
+            
+            color: #00A040;
+        }
+
+        .preview-content p {
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            font-size: 0.9rem;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* MODAL STYLES */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            margin: 5% auto;
+            padding: 40px;
+            border: 2px solid #00B050;
+            border-radius: 15px;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: #A0A0A0;
+            box-shadow: 0 10px 50px rgba(255, 215, 0, 0.2);
+        }
+
+        .modal-content h3 {
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 25px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+        }
+
+        .modal-content p {
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .close {
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 1px 1px 4px rgba(192, 192, 192, 0.6);
+        }
+
+        .close:hover {
+            color: #00A040;
+            transform: scale(1.3);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.6);
+        }
+
+        .modal-button {
+            background: linear-gradient(135deg, #E8E8E8 0%, #D0D0D0 100%);
+            color: #252525;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .modal-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(232, 232, 232, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* CTA SECTION */
+        .cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            text-align: center;
+            color: #D4AF37;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 165, 0, 0.4), 3px 3px 12px rgba(169, 169, 169, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .cta h2:hover {
+            text-shadow: 0 0 50px rgba(255, 215, 0, 0.9), 0 0 80px rgba(255, 165, 0, 0.7), 3px 3px 15px rgba(169, 169, 169, 0.7);
+            transform: scale(1.05);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            color: #CD7F32;
+            padding: 18px 50px;
+            border: 2px solid #CD7F32;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(205, 127, 50, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
+            color: #1a1a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(205, 127, 50, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            color: #CD7F32;
+            padding: 18px 50px;
+            border: 2px solid #CD7F32;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(205, 127, 50, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
+            color: #1a1a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(205, 127, 50, 0.4);
+        }
+
+        /* SOCIAL LINKS */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .social-link {
+            width: 100%;
+            padding: 14px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            border: 2px solid;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link:nth-child(1) {
+            background: linear-gradient(135deg, #E4405F 0%, #833AB4 100%);
+            color: white;
+            border-color: #E4405F;
+        }
+
+        .social-link:nth-child(1):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(228, 64, 95, 0.5);
+        }
+
+        .social-link:nth-child(2) {
+            background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%);
+            color: white;
+            border-color: #1877F2;
+        }
+
+        .social-link:nth-child(2):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(24, 119, 242, 0.5);
+        }
+
+        .social-link:nth-child(3) {
+            background: linear-gradient(135deg, #0077B5 0%, #004182 100%);
+            color: white;
+            border-color: #0077B5;
+        }
+
+        .social-link:nth-child(3):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 119, 181, 0.5);
+        }
+
+        .social-link:nth-child(4) {
+            background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+            color: white;
+            border-color: #EA4335;
+        }
+
+        .social-link:nth-child(4):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(234, 67, 53, 0.5);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0a;
+            color: #A0A0A0;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .process-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 15px 35px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Ai Nevoie de Texte care Încasează? Copywriting Profesionist, Sunt Aici!</h1>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+        <h2 class="section-title">Procesul Meu (3 Pași Simpli)</h2>
+        <div class="process-container">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Analiză</h3>
+                <p>Înțeleg afacerea ta, audiența și competitori pentru a crea texte relevante</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Copywriting Optimizat</h3>
+                <p>Scriu texte persuasive, bazate pe psihologie și best practices</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Rezultate Măsurabile</h3>
+                <p>Texte care aduc clienți și vânzări reale, cu ROI demonstrat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICII SECTION -->
+    <section class="services">
+        <h2 class="section-title">Ce Servicii Ofer?</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">✍️</div>
+                <h3>Landing Pages</h3>
+                <p>Texte care convertesc vizitatori în clienți</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📧</div>
+                <h3>Email Marketing</h3>
+                <p>Campanii care vând prin inbox</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Social Media Copy</h3>
+                <p>Postări și stories care generează engagement</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛍️</div>
+                <h3>Descrieri Produse</h3>
+                <p>Texte care fac produsele irezistibile</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Copy pentru Site</h3>
+                <p>Homepage, About, pagini de servicii</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎬</div>
+                <h3>Ad Copy</h3>
+                <p>Texte pentru Facebook, Google, TikTok Ads</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW SECTION -->
+    <section class="preview">
+        <h2 class="section-title" style="color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);">Preview - Exemple de Copywriting</h2>
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="preview-image" style="background: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop') center/cover;"></div>
+                <div class="preview-content">
+                    <h4>Landing Page Example</h4>
+                    <button class="modal-button" onclick="openModal('modal1')">Citește mai mult</button>
+                </div>
+            </div>
+            <div class="preview-card">
+                <div class="preview-image" style="background: url('https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&h=400&fit=crop') center/cover;"></div>
+                <div class="preview-content">
+                    <h4>Email Marketing Example</h4>
+                    <button class="modal-button" onclick="openModal('modal2')">Citește mai mult</button>
+                </div>
+            </div>
+            <div class="preview-card">
+                <div class="preview-image" style="background: url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop') center/cover;"></div>
+                <div class="preview-content">
+                    <h4>Social Media Example</h4>
+                    <button class="modal-button" onclick="openModal('modal3')">Citește mai mult</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALS -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h3>Landing Page Example</h3>
+                <p>Textul complet al exemplului de landing page va fi adăugat aici...</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h3>Email Marketing Example</h3>
+                <p><strong>Email 1 - Awareness:</strong></p>
+                <p>Bună Ziua.</p>
+                <p>[Nume] zâmbetul drept la preț corect. Dacă te gândești de mult să îți îndrepți dinții, dar te-au speriat prețurile sau durata tratamentului, avem o veste bună pentru tine. Am simplificat tot procesul.</p>
+                <p><strong>Iată ce trebuie să știi:</strong></p>
+                <p>• Accesibilitate: Aparat metalic de la 990 lei/arcadă.<br>
+                • Tehnologie: Variante estetice pentru discreție totală.<br>
+                • Sănătate: Dinți aliniați înseamnă mai puține vizite la dentist pentru carii sau tartru.</p>
+                <p>Nu mai lăsa timpul să treacă. Un zâmbet aliniat acum te scutește de cheltuieli duble peste 5 ani.</p>
+                <p>👉 <strong>Programează o consultație!</strong></p>
+                <hr style="border: 1px solid #00B050; margin: 30px 0;">
+                <p><strong>Email 2 - Problem Agitation:</strong></p>
+                <p>Bună Ziua!</p>
+                <p>De ce nu e bine să mai amâni? 🦷</p>
+                <p>Mulți dintre pacienții noștri ne spun același lucru: "Mi-aș fi dorit să fac asta acum 2 ani."</p>
+                <p>Problema? Dinții înghesuiți nu sunt doar o chestiune de estetică. Sunt un magnet pentru resturile alimentare și placa bacteriană pe care periuța nu le poate atinge. În timp, asta duce la sângerări gingivale, respirație urât mirositoare și, în final, la pierderea dinților sănătoși.</p>
+                <p>Ignorarea problemei astăzi înseamnă implanturi scumpe mâine.</p>
+                <p>Soluția este mai simplă decât crezi. Folosim tehnologie modernă care aliniază dinții confortabil și sigur. Cu prețuri accesibile, tratamentul este acum o investiție în sănătatea ta pe termen lung.</p>
+                <p>Ești gata să scapi de griji?</p>
+                <p>👉 <strong>Rezervă o consultație cu specialistul nostru!</strong></p>
+                <hr style="border: 1px solid #00B050; margin: 30px 0;">
+                <p><strong>Email 3 - Social Proof & Story:</strong></p>
+                <p>Salut!</p>
+                <p>Săptămâna trecută, o pacientă ne-a spus ceva ce ne-a pus pe gânduri: "Înainte, verificam mereu dacă am mâna la gură când râdeam la poze."</p>
+                <p>Aceasta este povestea multor oameni. Trecem împreună prin etape clare: o consultație detaliată, un plan personalizat și alegerea aparatului potrivit (clasic sau discret). Nu e doar despre metal și sârme, ci despre momentul în care te uiți în oglindă și îți place ce vezi.</p>
+                <p>Vrem să fii următoarea noastră poveste de succes.</p>
+                <p><strong>Profită de oferta actuală:</strong><br>
+                ✨ Aparate dentare de la 990 lei/arcadă.<br>
+                ✨ Consult de specialitate și plan de tratament inclus.</p>
+                <p>Fă primul pas spre zâmbetul pe care îl meriți chiar azi.</p>
+                <p>👉 <strong>Vreau o programare!</strong></p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h3>Social Media Example</h3>
+                <p>Textul complet al exemplului de social media va fi adăugat aici...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta">
+        <h2 style="color: #00B050; text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 2px 2px 8px rgba(192, 192, 192, 0.7);">Gata Să Transformi Cuvintele în Vânzări?</h2>
+        <div class="cta-buttons">
+            <a href="tel:0757974125" class="btn-primary">📞 CONTACTEAZĂ-MĂ</a>
+            <button class="btn-secondary">📋 VEZI PORTOFOLIU</button>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/copforcopy/" class="social-link" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61587218917948&locale=ro_RO" class="social-link" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/costea-dragos-8831923aa/" class="social-link" target="_blank">LinkedIn</a>
+            <a href="mailto:copforcopy@gmail.com" class="social-link">Email</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Copywriting Services. Transformă-ți afacerea cu texte.</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
